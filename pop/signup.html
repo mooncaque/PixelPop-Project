@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<script src="favicon.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="TitleBarImage.png">
+<link rel="icon" href="pixelpop123.svg" type="image/png" id="favicon">
+<title>PIXEL </title>
+<script src="titlewave.js"></script>
+
+<link rel="stylesheet" href="style4signin.css">
+<script src="https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+  <!--Poppins font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <!--Poppins font-->
+
+  <!--Rowdie font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
+  <!--Rowdie font-->
+
+  <!--Bebas neue font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rowdies:wght@700&display=swap" rel="stylesheet"> 
+  <!--Bebas neue font-->
+
+  <!--Lisu Bosa font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@200&display=swap" rel="stylesheet">
+  <!--Lisu Bosa font-->
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+</head>
+
+
+
+
+
+<!--Baloons and the script-->
+
+<div class="balloons" id="balloons-container">
+		
+</div>
+<script src="balloon.js"></script>
+
+<!--Baloons and the script-->  
+
+
+
+
+
+
+<script src="scrolledOnce.js"></script>
+
+
+
+<header>
+      
+ 
+
+
+	<div class="logo">
+		<a href="index.html" >
+			<svg id="my-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+			  </svg>
+
+
+	<script src="svgImport.js"></script>
+			  
+			  
+		</a>
+	</div>
+
+	</header>
+
+
+
+
+
+
+
+
+
+<div class="mf">
+
+ <!-- Navbar goes here -->
+ <nav>
+	
+
+	<div class="ham2">
+		<div class="overlay" onclick="closeMenu()"></div>
+		<div class="hamburger2" onclick="toggleMenu()">
+			<div></div>
+			<div></div>
+			<div></div>
+		  </div>
+	
+	  <div class="menu">
+		
+		<a href="hireservices.html">Hire Us
+			
+		</a>
+	
+		   <a href="packages.html"> 
+			Packages
+		</a>
+	
+		   <a href="profile.html"> 
+			Account
+		</a>
+	
+	  </div>
+	</div>
+	  </nav>
+	
+	  
+	
+	  <!-- Navbar goes here -->
+
+
+
+       <div class="cat">
+           <h1 id="signuptext">
+           </h1>
+        </div>
+           
+
+     
+        <form method="post" action="signup.php" onsubmit="return validateForm()" class="form">
+          <div class="form-header">
+              <img src="gg.png" class="floating-image" alt="Floating Balloon">
+          </div>
+          <input type="text" id="signupEmail" name="emailInput" placeholder="pixelpop@lk.com" class="custom-input" value="">
+          <input type="password" name="password" placeholder="Enter Password" class="custom-input">
+          <button type="submit" class="button" name="submit">
+              <p id="signupbutton" class="custom-button"></p>
+          </button>
+          <a href="signin.html" id="dont"></a>
+      </form>
+      
+      <script src="signup.js"></script>
+      
+		
+
+
+
+    <script>
+        
+        function getEmailParameter() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('email') || '';
+        }
+    
+        
+        function preFillEmail() {
+            const emailInput = document.getElementById('emailInput');
+            emailInput.value = getEmailParameter();
+        }
+    
+      
+        window.onload = preFillEmail;
+        
+        function validateForm() {
+            
+            var emailInput = document.getElementById("emailInput");
+            var email = emailInput.value.trim();
+    
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    
+            if (!emailPattern.test(email)) {
+                alert("Please Enter a Valid Email.");
+                emailInput.focus();
+                return false;
+            }
+    
+            return true;
+        }
+    </script>
+      
+       
+
+    </div>
+
+
+
+  
+
+
+    
+   <!--Start of the footer-->
+   <footer>
+
+    <div class="oursocials">
+      
+      
+      
+
+		<div class="container2">
+			<img src="fb1.png" alt="avatar" id="fb" title="Facebook" onclick="redirectToFacebook()">
+			<img src="insta1.png" alt="avatar" id="insta" title="Instagram" onclick="redirectToInstagram()">
+			<img src="mail1.png" alt="avatar" id="mail" title="Email" onclick="redirectToEmail()">
+		  </div>
+
+
+
+
+      <h1 id="langselect"> </h1>
+    
+    </div>
+    <div class="abttext">
+
+		
+
+    <div class="langs">
+      <button id="englishBtn">English</button>
+      <button id="sinhalaBtn">සිංහල</button>
+      <button id="tamilBtn">தமிழ்</button>
+  </div>
+
+
+
+
+
+
+                
+      
+      <h2>PixelPop Admins</h2>
+      <h3>|| All Rights Reserved ||</h3>
+      <h4>LK</h4>
+    
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+</main>
+<script src="lang4signup.js"></script>
+<script src="hamburger.js"></script>
+<script src="opaque.js"></script>
+
+
+
+</div>
+</body>
+</html>
+
+  
+
